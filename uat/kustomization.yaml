@@ -1,0 +1,10 @@
+resources:
+  - configMap.yaml  # Your resource file that includes VERSION as a variable
+
+vars:
+  - name: VERSION
+    objref:
+      kind: ConfigMap
+      name: api-config
+    fieldref:
+      fieldpath: data.VERSION
