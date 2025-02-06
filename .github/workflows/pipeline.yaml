@@ -26,6 +26,7 @@ jobs:
 
     - name: Build with Kustomize
       run: |
+        cd dev
         kustomize build . > configmap.yaml  # Run kustomize build and output to configmap.yaml
 
     - name: Commit and push configmap.yaml
